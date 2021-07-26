@@ -1,6 +1,6 @@
 {
     "name": "gsambou",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Get to know gsambou via `npx gsambou`.",
     "bin": {
         "gsambou": "index.js"
