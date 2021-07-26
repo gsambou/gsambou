@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+const clearConsole = require('clear-any-console');
+
+clearConsole();
 
 console.log(`gsambou
 Data Protection Officer - Chargé Protection des données
