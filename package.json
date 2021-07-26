@@ -11,5 +11,13 @@
     "keywords": [
         "gsambou",
         "data protection"
-    ]
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "repository": "gsambou/gsambou",
+    "author": {
+        "name": "gsambou",
+        "email": "dev@gsambou.com",
+        "url": "https://gsambou.com"
+    }
 }
