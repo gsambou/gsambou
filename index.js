@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-const welcome = require('cli-welcome');
 const chalk = require('chalk');
-const sym = require('log-symbols');
-const pkgJSON = require('./package.json');
+const alert = require('cli-info');
+const init = require('./utils/init');
 const log = console.log;
 
 const color = {
@@ -13,25 +12,10 @@ const color = {
 };
 const italic = chalk.italic;
 
-const alert = {
-	success: chalk.green.inverse,
-	info: chalk.blue.inverse,
-	warning: chalk.keyword(`orange`).inverse,
-	error: chalk.red.bold.inverse,
-};
+(() => {
+	init();
 
-welcome({
-	title: `MyName SAMBOU`,
-	tagLine: `Hello nice to meet u`,
-	description: pkgJSON.description,
-	version: pkgJSON.version,
-	bgColor: `#6937FF`,
-	color: `#000000`,
-	bold: true,
-	clear: true,
-});
-
-log(`
+	log(`
 ${italic(`
 Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 `)}
@@ -41,12 +25,8 @@ ${color.github(` GitHub `)}: ${color.dim(`https://github.com/gsambou`)}
 ${color.blog(` Blog `)}: ${color.dim(`https://gsambou.com`)}
 `);
 
-log(`
-${sym.success} ${alert.success(` SUCCESS `)}: Thank for checking out my CLI.
-
-${sym.info} ${alert.info(` INFO `)}: I'm creating my portfolio
-
-${sym.warning} ${alert.warning(` WARNING `)}: Please don't copy me. Be yourself.
-
-${sym.error} ${alert.error(` ERROR `)}: I'm on vacation. Contact me next week.
-`);
+	alert({ type: `success`, msg: `Thank for checking out my CLI.` });
+	alert({ type: `info`, msg: `I'm creating my portfolio` });
+	alert({ type: `warning`, msg: `Please don't copy me. Be yourself.` });
+	alert({ type: `error`, msg: `I'm on vacation. Contact me next week` });
+})();
