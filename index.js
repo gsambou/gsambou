@@ -1,27 +1,34 @@
 #!/usr/bin/env node
 const welcome = require('cli-welcome');
 const chalk = require('chalk');
+const sym = require('log-symbols');
 const pkgJSON = require('./package.json');
 const log = console.log;
 
 const color = {
-    twitter: chalk.hex(`#1da1f2`).bold.inverse,
-    github: chalk.hex(`#6cc644`).bold.inverse,
-    blog: chalk.hex(`#6937FF`).bold.inverse,
-    dim: chalk.dim,
+	twitter: chalk.hex(`#1da1f2`).bold.inverse,
+	github: chalk.hex(`#6cc644`).bold.inverse,
+	blog: chalk.hex(`#6937FF`).bold.inverse,
+	dim: chalk.dim,
 };
 const italic = chalk.italic;
 
+const alert = {
+	success: chalk.green.inverse,
+	info: chalk.blue.inverse,
+	warning: chalk.keyword(`orange`).inverse,
+	error: chalk.red.bold.inverse,
+};
 
 welcome({
-    title: `MyName SAMBOU`,
-    tagLine: `Hello nice to meet u`,
-    description: pkgJSON.description,
-    version: pkgJSON.version,
-    bgColor: `#6937FF`,
-    color: `#000000`,
-    bold: true,
-    clear: true,
+	title: `MyName SAMBOU`,
+	tagLine: `Hello nice to meet u`,
+	description: pkgJSON.description,
+	version: pkgJSON.version,
+	bgColor: `#6937FF`,
+	color: `#000000`,
+	bold: true,
+	clear: true,
 });
 
 log(`
@@ -32,4 +39,14 @@ Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
 ${color.twitter(` Twitter `)}: ${color.dim(`https://twitter.com/g_sambou`)}
 ${color.github(` GitHub `)}: ${color.dim(`https://github.com/gsambou`)}
 ${color.blog(` Blog `)}: ${color.dim(`https://gsambou.com`)}
+`);
+
+log(`
+${sym.success} ${alert.success(` SUCCESS `)}: Thank for checking out my CLI.
+
+${sym.info} ${alert.info(` INFO `)}: I'm creating my portfolio
+
+${sym.warning} ${alert.warning(` WARNING `)}: Please don't copy me. Be yourself.
+
+${sym.error} ${alert.error(` ERROR `)}: I'm on vacation. Contact me next week.
 `);
