@@ -10,9 +10,9 @@ const color = {
 };
 
 const social = `
-${color.twitter(` Twitter `)}: ${color.dim(`https://twitter.com/g_sambou`)}
-${color.github(` GitHub `)}: ${color.dim(`https://github.com/gsambou`)}
-${color.blog(` Blog `)}: ${color.dim(`https://gsambou.com`)}
+${color.twitter(` Twitter `)} ${color.dim(`https://twitter.com/g_sambou`)}
+${color.github(` GitHub `)} ${color.dim(`https://github.com/gsambou`)}
+${color.blog(` Blog `)} ${color.dim(`https://gsambou.com`)}
 `;
 
 const bio = `
@@ -21,7 +21,7 @@ Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
 `)}
 `;
 
-const ad = `visit my website gsambou.com`;
+const ad = `Visit my website gsambou.com`;
 
 module.exports = {
 	bio,
