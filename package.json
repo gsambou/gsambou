@@ -5,10 +5,12 @@
 	"bin": {
 		"gsambou": "index.js"
 	},
-	"dependencies": {},
 	"keywords": [
 		"gsambou",
-		"data protection"
+		"node.js developer",
+		"javascript professionel",
+		"GDPR professionel",
+		"backend developer"
 	],
 	"license": "MIT",
 	"main": "index.js",

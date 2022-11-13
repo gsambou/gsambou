@@ -1,6 +1,6 @@
 # `npx gsambou`
 
-> Get to know gsambou using command line with Node.js
+> Get to know gsambou using your command line with Node.js
 
 ## Usage
 
