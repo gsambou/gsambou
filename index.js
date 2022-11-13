@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-console.log('ghislain sambou');
+console.log(`ghislain sambou`);
