@@ -6,5 +6,5 @@ const alert = require('alert-log');
 (() => {
 	init();
 	socials();
-	alert('info', 'Follow me on @gsamboudev');
+	alert('info', 'Follow me on @gsdotdev');
 })();
