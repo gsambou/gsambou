@@ -8,7 +8,7 @@
 	"keywords": [
 		"gsambou",
 		"node.js developer",
-		"javascript professionel",
+		"javascript developer",
 		"GDPR professionel",
 		"backend developer"
 	],
@@ -19,5 +19,8 @@
 		"name": "gsambou",
 		"email": "dev@gsambou.com",
 		"url": "https://gsambou.com"
+	},
+	"dependencies": {
+		"alert-log": "^1.0.2"
 	}
 }
