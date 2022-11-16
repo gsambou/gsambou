@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	twitter: {
 		back: '\u001b[48;5;81;1m',
 		text: '\u001b[38;5;19;1m',

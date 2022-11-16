@@ -1,25 +1,29 @@
-const { parseArgs } = require('node:util');
-const options = require('./cli-options');
-const getArgs = require('./argsParser');
-const pkgJSON = require('./../package.json');
+import { parseArgs } from 'node:util';
+import options from './cli-options.js';
+import getArgs from './argsParser.js';
+import pkgData from './readpkg.js';
+
+const pkgJSON = pkgData;
 
 const helpText = `
  ${pkgJSON.description} \n
 	Usage
-	  $ npx gsambou [options] <commands>
+	  $ \u001b[38;5;118mnpx gsambou\u001b[0m \u001b[38;5;3m [--options]\u001b[0m \u001b[38;5;14m<commands>\u001b[0m
 
 	Options
-            --social                  Print the social info
-            --no-social               Don't print the social info
-            --ad                      Print the ads info
-            --no-ad                   Don't print the ad info
-            --version                 Print CLI version
+            \u001b[38;5;3m--social\u001b[0m                  Print the social info
+            \u001b[38;5;3m--no-social\u001b[0m               Don't print the social info
+            \u001b[38;5;3m--ad\u001b[0m                      Print the ads info
+            \u001b[38;5;3m--no-ad\u001b[0m                   Don't print the ad info
+            \u001b[38;5;3m--debug\u001b[0m                   Print debug information
+            \u001b[38;5;3m--version\u001b[0m                 Print CLI version
 
         Commands
-            help                      Print CLI help information
+            \u001b[38;5;14mhelp\u001b[0m                      Print CLI help information
 
 	Examples
-	  $ npx gsambou --social      Print the social info
+	  $ \u001b[38;5;118mnpx gsambou\u001b[0m \u001b[38;5;3m--social\u001b[0m
+	  $ \u001b[38;5;118mnpx gsambou\u001b[0m \u001b[38;5;3m--no-ad\u001b[0m
 
 `;
 
@@ -27,13 +31,8 @@ const { validArgs: args, invalidArgs } = getArgs(process.argv);
 
 const { values: flag } = parseArgs({ args, options });
 
-const showVersion = () => {
+export const showVersion = () => {
 	console.log(pkgJSON.version);
 };
 
-module.exports = {
-	flag,
-	invalidArgs,
-	helpText,
-	showVersion,
-};
+export { flag, invalidArgs, helpText };

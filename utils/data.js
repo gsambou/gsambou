@@ -1,4 +1,4 @@
-const COLORS = require('./constants');
+import COLORS from './constants.js';
 
 const bio = `
 
@@ -17,8 +17,4 @@ const social = `
 
 const ads = `Follow me on twitter @gsdotdev`;
 
-module.exports = {
-	bio,
-	social,
-	ads,
-};
+export { bio, social, ads };

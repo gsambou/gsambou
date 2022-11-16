@@ -1,4 +1,4 @@
-const options = require('./cli-options');
+import options from './cli-options.js';
 
 const parseArgsInput = (args) => {
 	const data = args.slice(2);
@@ -24,7 +24,7 @@ const sanitArgs = (args) => {
 	return data;
 };
 
-module.exports = (args) => {
+export default (args) => {
 	const argsList = [];
 	const invalidArgs = [];
 	parseArgsInput(args).forEach((d) => {

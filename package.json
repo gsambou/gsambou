@@ -1,6 +1,7 @@
 {
 	"name": "gsambou",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "Get to know gsambou via `npx gsambou`.",
 	"bin": {
 		"gsambou": "index.js"
@@ -21,6 +22,11 @@
 		"url": "https://gsambou.com"
 	},
 	"dependencies": {
-		"alert-log": "^1.0.2"
+		"alert-log": "^1.0.2",
+		"boxen": "^7.0.0",
+		"chalk-table": "^1.0.2",
+		"draftlog": "^1.0.13",
+		"node-fetch": "^3.3.0",
+		"ora": "^6.1.2"
 	}
 }

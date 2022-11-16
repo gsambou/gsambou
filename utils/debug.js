@@ -1,6 +1,6 @@
-const alert = require('alert-log');
+import alert from 'alert-log';
 
-module.exports = (flag, input) => {
+export default (flag, input) => {
 	alert('warning', 'CLI DATA ⇣ 🔗', 'debugger');
 	console.log(`input`, input);
 	console.log(`flag`, { ...flag });
