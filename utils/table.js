@@ -13,8 +13,8 @@ const getTableOptions = () => {
 		columns: [
 			{ field: 'name', name: 'Name' },
 			{ field: 'description', name: 'Description' },
-			{ field: 'updated_at', name: 'Updated_at' },
-			{ field: 'language', name: 'language' },
+			{ field: 'updated_at', name: 'Last Update' },
+			{ field: 'language', name: 'Language' },
 		],
 	};
 };

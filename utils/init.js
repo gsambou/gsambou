@@ -18,5 +18,6 @@ export default () => {
 			{ title: '🛡 👨🏾💻', titleAlignment: 'center', float: 'center', padding: 1 }
 		)
 	);
+	process.stdout.write('\n');
 	process.stdout.write('\n\u001b[90;1;3m ' + pkgJSON.description + ' \u001b[0m\n');
 };
