@@ -1,11 +1,4 @@
-import DraftLog from 'draftlog';
 import chalkTable from 'chalk-table';
-
-const initializeTable = (database) => {
-	const table = chalkTable(getTableOptions(), database);
-	console.draft(table);
-	process.stdout.write('\n');
-};
 
 const getTableOptions = () => {
 	return {
@@ -20,6 +13,6 @@ const getTableOptions = () => {
 };
 
 export default (database) => {
-	DraftLog(console);
-	initializeTable(database);
+	const table = chalkTable(getTableOptions(), database);
+	return table;
 };

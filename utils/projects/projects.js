@@ -31,7 +31,8 @@ export default async () => {
 				});
 		});
 		spinner.stop();
-		initializeTerminal(gitRepositories);
+		console.log(initializeTerminal(gitRepositories));
+		process.stdout.write('\n');
 	} catch (error) {
 		console.error('API CALL FAILED', error.message);
 	}
