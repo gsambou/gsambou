@@ -1,6 +1,5 @@
-import pkgData from './readpkg.js';
+import pkgJSON from './data/jsonFile.js';
 import boxen from 'boxen';
-const pkgJSON = pkgData;
 
 export default () => {
 	process.on('unhandledRejection', (err) => {

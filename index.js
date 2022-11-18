@@ -1,29 +1,29 @@
 #!/usr/bin/env node
 
-import init from './utils/init.js';
-import { bio, social, ads } from './utils/data.js';
-import { flag, invalidArgs, helpText, showVersion } from './utils/cli.js';
-import debug from './utils/debug.js';
-import alert from 'alert-log';
-import showGitProjects from './utils/projects/projects.js';
+import argsParser from './utils/parser/argsParser.js';
+import cmd from './utils/repositories/cmd.js';
 
 (() => {
-	if (flag.version || process.argv.slice(2).includes('version')) {
-		showVersion();
+	const flag = argsParser(cmd.help);
+
+	if (flag.version) {
+		cmd.showVersion();
 		return;
 	}
 
-	if (invalidArgs.length || flag.help || process.argv.slice(2).includes('help')) {
-		console.log(helpText);
+	if (flag.help) {
+		cmd.help();
 		return;
 	}
 
-	init();
-	console.log(bio);
+	cmd.init();
+	cmd.showBio();
 
-	!flag['no-social'] && console.log(social);
-	process.stdout.write('\n');
-	showGitProjects();
-	!flag['no-ad'] && alert('info', ads);
-	flag.debug && debug(flag, process.argv.slice(2));
+	!flag['no-social'] && cmd.showSocial();
+	cmd.newline();
+
+	cmd.gitWorks();
+	!flag['no-ad'] && cmd.showAds();
+
+	flag.debug && cmd.debug(flag, process.argv.slice(2));
 })();

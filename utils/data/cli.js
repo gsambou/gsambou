@@ -1,9 +1,4 @@
-import { parseArgs } from 'node:util';
-import options from './cli-options.js';
-import getArgs from './argsParser.js';
-import pkgData from './readpkg.js';
-
-const pkgJSON = pkgData;
+import pkgJSON from './jsonFile.js';
 
 const helpText = `
  ${pkgJSON.description} \n
@@ -27,12 +22,8 @@ const helpText = `
 
 `;
 
-const { validArgs: args, invalidArgs } = getArgs(process.argv);
-
-const { values: flag } = parseArgs({ args, options });
-
 export const showVersion = () => {
 	console.log(pkgJSON.version);
 };
 
-export { flag, invalidArgs, helpText };
+export { helpText };

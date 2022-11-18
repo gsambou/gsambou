@@ -13,12 +13,30 @@ export default {
 	},
 	help: {
 		type: 'boolean',
+		short: 'h',
 	},
 	debug: {
 		type: 'boolean',
+		short: 'd',
 	},
 	version: {
 		type: 'boolean',
 		short: 'v',
 	},
 };
+
+export const ARGLIST = [
+	'--social',
+	'--no-social',
+	'--ad',
+	'--no-ad',
+	'--help',
+	'help',
+	'-h',
+	'debug',
+	'--debug',
+	'-d',
+	'version',
+	'--version',
+	'-v',
+];
