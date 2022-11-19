@@ -4,7 +4,8 @@ const getTableOptions = () => {
 	return {
 		leftPad: 1,
 		columns: [
-			{ field: 'name', name: 'Name' },
+			{ field: 'id', name: 'ID' },
+			{ field: 'name', name: 'Project' },
 			{ field: 'description', name: 'Description' },
 			{ field: 'updated_at', name: 'Last Update' },
 			{ field: 'language', name: 'Language' },

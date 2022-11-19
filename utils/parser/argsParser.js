@@ -12,7 +12,7 @@ const getArgs = (argList, args) => {
 
 export default (callback) => {
 	const result = getArgs(ARGLIST, process.argv);
-	console.log(result);
+
 	if (!result.valid && process.argv.slice(2).length > 0) {
 		callback();
 		process.exit();
