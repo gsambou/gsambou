@@ -36,14 +36,14 @@ const getProjects = async (api) => {
 };
 
 export default async () => {
+	spinner.start();
 	try {
-		spinner.start();
 		const gitRepositories = await getProjects(API);
-
-		spinner.stop();
-		console.log(initializeTerminal(gitRepositories));
+		process.stdout.write('\n');
+		process.stdout.write(initializeTerminal(gitRepositories));
 		process.stdout.write('\n');
 	} catch (error) {
 		console.error('API CALL FAILED', error.message);
 	}
+	spinner.stop();
 };
